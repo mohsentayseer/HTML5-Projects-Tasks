@@ -1,0 +1,63 @@
+/* styles.css */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(247, 247, 247);
+}
+
+.field {
+  position: relative;
+  width: 1000px;
+  height: 200px;
+}
+
+.grass {
+  width: 100%;
+  height: auto;
+}
+
+.player {
+  width: 100px;
+  height: auto;
+  position: absolute;
+}
+
+#player1 {
+  left: 0;
+}
+
+#player2 {
+  right: 0;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  background-color: rgb(89, 187, 45);
+}
+#start {
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: greenyellow;
+}
+
+@keyframes moveBall {
+  0% {
+    left: 70px;
+  }
+  50% {
+    left: calc(100% - 140px);
+  }
+  100% {
+    left: 70px;
+  }
+}

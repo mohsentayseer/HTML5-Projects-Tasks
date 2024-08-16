@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Animation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="field">
+      <img src="./images/grass.png" alt="Grass" class="grass" />
+      <img
+        src="./images/player1.png"
+        alt="Player 1"
+        class="player"
+        id="player1"
+      />
+      <img src="./images/ball.png" alt="Ball" class="ball" id="ball" />
+      <img
+        src="./images/player2.png"
+        alt="Player 2"
+        class="player"
+        id="player2"
+      />
+    </div>
+    <button id="start">Start</button>
+    <script>
+      document.getElementById("start").addEventListener("click", () => {
+        const ball = document.getElementById("ball");
+        ball.style.animation = "moveBall";
+        ball.style.animationDuration = "2s";
+        ball.style.animationIterationCount = "infinite";
+      });
+    </script>
+  </body>
+</html>

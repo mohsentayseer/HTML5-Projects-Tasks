@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day1 task1</title>
+  </head>
+  <body>
+    <form action="" method="get" style="text-align: center">
+      <h1>Change Email Address</h1>
+      <label for="username">User Name </label>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        pattern="^[A-Za-z]+(\s*[A-Za-z]+)*$"
+        placeholder="username"
+        required
+      />
+      <label for="email" style="padding-left: 20px">Email </label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+        placeholder="email"
+        required
+      />
+      <button type="submit">Change</button>
+    </form>
+  </body>
+</html>

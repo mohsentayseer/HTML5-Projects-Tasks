@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  height: 100px;
+  transition: opacity 2s ease;
+}
+
+.gallery img:hover {
+  opacity: 0.3;
+  filter: blur(5px);
+}

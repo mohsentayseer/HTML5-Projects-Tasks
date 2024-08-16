@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day1 task2</title>
+    <style>
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+      }
+      input {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="red">Red</label>
+      <input
+        type="range"
+        name=""
+        id="red"
+        value="0"
+        max="255"
+        onchange="colorChange()"
+      />
+      <label for="green">Green</label>
+      <input
+        type="range"
+        name=""
+        id="green"
+        value="0"
+        max="255"
+        onchange="colorChange()"
+      />
+      <label for="blue">Blue</label>
+      <input
+        type="range"
+        name=""
+        id="blue"
+        value="0"
+        max="255"
+        onchange="colorChange()"
+      />
+    </div>
+    <h1 id="text">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et consequuntur
+      doloribus dignissimos quos sequi veniam cupiditate, quidem nobis porro
+      iusto dolorum earum nemo ipsa nam laudantium commodi id cumque alias!
+    </h1>
+
+    <script>
+      var red = document.getElementById("red");
+      var green = document.getElementById("green");
+      var blue = document.getElementById("blue");
+      var text = document.getElementById("text");
+      var rgbColor =
+        "rgb(" + red.value + ", " + green.value + ", " + blue.value + ")";
+
+      function colorChange() {
+        var rgbColor =
+          "rgb(" + red.value + ", " + green.value + ", " + blue.value + ")";
+        text.style.color = rgbColor;
+      }
+    </script>
+  </body>
+</html>

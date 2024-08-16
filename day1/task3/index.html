@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day1 task3</title>
+    <style>
+      #songsContainer {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        border: 1px solid black;
+        margin: 30px 30px;
+      }
+      button {
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding-bottom: 10px;
+        text-align: start;
+        cursor: pointer;
+        color: tomato;
+        height: 50px;
+      }
+      #audioContainer {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid black;
+        width: 600px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 30px 30px;
+      }
+      img {
+        width: 250px;
+        height: 155px;
+        margin: 0px 3px;
+        margin-top: 3px;
+      }
+      #play,
+      #pause,
+      #stop {
+        width: 60px;
+        display: inline-block;
+        padding: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 20px;
+        /* margin-left: 10px; */
+        margin-right: 15px;
+      }
+      audio {
+        margin: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <audio
+      id="audio"
+      controls
+      src="Super Mario Bros (NES) Music - Overworld Theme.mp3"
+    ></audio>
+    <div id="audioContainer">
+      <div>
+        <img src="./images/0.jpeg" alt="image" />
+      </div>
+
+      <div>
+        <div style="display: flex">
+          <label for="playSound">Player</label>
+
+          <input type="range" id="playSound" min="0" max="100" value="0" />
+        </div>
+        <br />
+        <button id="play" style="background-color: green" onclick="play()">
+          l>
+        </button>
+        <button id="pause" style="background-color: aqua" onclick="pause()">
+          ll
+        </button>
+        <button id="stop" style="background-color: red" onclick="stop()">
+          stop
+        </button>
+        <div style="display: flex">
+          <label for="volume">Volume</label>
+          <input
+            type="range"
+            name="volume"
+            id="volume"
+            value="1"
+            min="0"
+            max="1"
+            step="0.1"
+            onchange="volumeChange()"
+          />
+        </div>
+      </div>
+    </div>
+    <table id="songsContainer"></table>
+  </body>
+  <script src="js.js"></script>
+</html>
